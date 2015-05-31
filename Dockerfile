@@ -19,7 +19,9 @@ COPY config /usr/share/elasticsearch/config
 
 # Define mountable directories in which we put the elasticsearch data for log and data
 VOLUME /data
-RUN mkdir -p /data/logs
-RUN mkdir -p /data/data
+
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["elasticsearch"]
