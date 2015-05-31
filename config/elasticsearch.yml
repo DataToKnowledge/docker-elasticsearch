@@ -140,9 +140,9 @@ cluster.name: clusterName
 
 #################################### Paths ####################################
 
-# path:
-#   data: /data/data
-#   logs: /data/logs
+path:
+  data: /data/data
+  logs: /data/logs
 
 # Path to directory containing configuration (this file and logging.yml):
 #

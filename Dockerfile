@@ -13,7 +13,11 @@ RUN mkdir -p /usr/share/elasticsearch/plugins/http-basic
 
 RUN wget -P /usr/share/elasticsearch/plugins/http-basic  https://github.com/DataToKnowledge/elasticsearch-http-basic/releases/download/v1.5.0/elasticsearch-http-basic-1.5.0.jar
 
+#copy base config, this should be changed
 ENV PATH /usr/share/elasticsearch/bin:$PATH
 COPY config /usr/share/elasticsearch/config
+
+# Define mountable directories in which we put the elasticsearch data
+VOLUME ["/data"]
 
 CMD ["elasticsearch"]
