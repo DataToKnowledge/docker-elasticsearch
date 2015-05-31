@@ -17,7 +17,7 @@ RUN wget -P /usr/share/elasticsearch/plugins/http-basic  https://github.com/Data
 ENV PATH /usr/share/elasticsearch/bin:$PATH
 COPY config /usr/share/elasticsearch/config
 
-# Define mountable directories in which we put the elasticsearch data
+# Define mountable directories in which we put the elasticsearch data for log and data
 VOLUME ["/data"]
 
 CMD ["elasticsearch"]

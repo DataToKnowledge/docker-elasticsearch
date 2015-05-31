@@ -2,6 +2,7 @@ db:
   extends:
    file: docker-compose.yml
    service: db
+  restart: on-failure:10
   volumes:
    - "./config:/usr/share/elasticsearch/config"
    - "/data/elasticsearch_data/esData1:/data"
