@@ -10,6 +10,5 @@ db:
     - ES_HEAP_SIZE=2g
     - ES_MIN_MEM=2g
     - ES_MAX_MEM=2g
-  # restart: on-failure:10
   name: elastic1
   command: elasticsearch

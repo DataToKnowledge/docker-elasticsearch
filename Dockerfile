@@ -18,6 +18,8 @@ ENV PATH /usr/share/elasticsearch/bin:$PATH
 COPY config /usr/share/elasticsearch/config
 
 # Define mountable directories in which we put the elasticsearch data for log and data
-VOLUME ["/data"]
+VOLUME /data
+RUN mkdir -p /data/logs
+RUN mkdir -p /data/data
 
 CMD ["elasticsearch"]
