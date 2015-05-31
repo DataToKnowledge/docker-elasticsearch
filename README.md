@@ -1,6 +1,24 @@
 docker-elasticsearch
 ====================
 
+This image can be used via:
+
+-	docker-compose
+-	docker
+
+How to run with docker-compose
+==============================
+
+There is a `docker-compose.yml` to be used in development and a `production.yml` for production. Please refere to the [official documentation ](https://docs.docker.com/compose/extends/#example) for reference.
+
+To start in development:
+
+1.	`docker-compose up -d` start the service as daemon
+2.	`docker-compose up -d -f production.yml` to start with production yaml.
+
+How to run with docker
+======================
+
 Build
 -----
 
