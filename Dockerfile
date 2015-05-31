@@ -11,6 +11,6 @@ RUN  /usr/share/elasticsearch/bin/plugin --install lmenezes/elasticsearch-kopf/m
 # install http auth
 RUN mkdir -p /usr/share/elasticsearch/plugins/http-basic \
   cd /usr/share/elasticsearch/plugins/http-basic \
-  wget https://github.com/DataToKnowledge/elasticsearch-http-basic/releases/download/v1.5.0/elasticsearch-http-basic-1.5.0.jarjar
+  wget https://github.com/DataToKnowledge/elasticsearch-http-basic/releases/download/v1.5.0/elasticsearch-http-basic-1.5.0.jar
 
 CMD ["elasticsearch"]

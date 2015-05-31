@@ -4,4 +4,4 @@ db:
    service: db
   volumes:
    - "./config:/usr/share/elasticsearch/config"
-   - "/data/elasticsearch/data1:/usr/share/elasticsearch/data"
+   - "/data/elasticsearch_data/esData1:/usr/share/elasticsearch/data"
