@@ -9,8 +9,11 @@ RUN /usr/share/elasticsearch/bin/plugin --install elasticsearch/elasticsearch-an
 RUN  /usr/share/elasticsearch/bin/plugin --install lmenezes/elasticsearch-kopf/master
 
 # install http auth
-RUN mkdir -p /usr/share/elasticsearch/plugins/http-basic \
-  cd /usr/share/elasticsearch/plugins/http-basic \
-  wget https://github.com/DataToKnowledge/elasticsearch-http-basic/releases/download/v1.5.0/elasticsearch-http-basic-1.5.0.jar
+RUN mkdir -p /usr/share/elasticsearch/plugins/http-basic
+
+RUN wget -P /usr/share/elasticsearch/plugins/http-basic  https://github.com/DataToKnowledge/elasticsearch-http-basic/releases/download/v1.5.0/elasticsearch-http-basic-1.5.0.jar
+
+ENV PATH /usr/share/elasticsearch/bin:$PATH
+COPY config /usr/share/elasticsearch/config
 
 CMD ["elasticsearch"]
