@@ -3,12 +3,9 @@ db:
   ports:
     - "9200:9200"
     - "9300:9300"
-  # volumes:
-  #   - "config/:/usr/share/elasticsearch/config"
-  #   - "data:/usr/share/elasticsearch/data"
   environment:
-    - ES_HEAP_SIZE=2g
-    - ES_MIN_MEM=2g
-    - ES_MAX_MEM=2g
+    - ES_HEAP_SIZE=1g
+    - ES_MIN_MEM=1g
+    - ES_MAX_MEM=1g
   name: elastic1
   command: elasticsearch

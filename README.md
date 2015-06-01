@@ -49,10 +49,10 @@ This image comes with a default set of configuration files for `elasticsearch`, 
 docker run -d -v "$PWD/config":/usr/share/elasticsearch/config elasticsearch
 ```
 
-This image is configured with a volume at `/usr/share/elasticsearch/data` to hold the persisted index data. Use that path if you would like to keep the data in a mounted volume:
+This image is configured with a volume at `/data` to hold the persisted index data. Use that path if you would like to keep the data in a mounted volume:
 
 ```
-docker run -d -v "$PWD/esdata":/usr/share/elasticsearch/data elasticsearch
+docker run -d -v "$PWD/esdata":/data elasticsearch
 ```
 
 This image is configure with authentication in the folder `config\elasticsearch.yml`

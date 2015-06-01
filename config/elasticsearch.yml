@@ -29,7 +29,7 @@
 # Cluster name identifies your cluster for auto-discovery. If you're running
 # multiple clusters on the same network, make sure you're using unique names.
 #
-cluster.name: clusterName
+cluster.name: test
 
 
 #################################### Node #####################################
@@ -235,11 +235,9 @@ path:
 #
 #http.enabled: false
 
-http.cors.enabled: true
-#http.cors.allow-origin: *
-
 
 ################################### Gateway ###################################
+
 # The gateway allows for persisting the cluster state between full cluster
 # restarts. Every change to the state (such as adding an index) will be stored
 # in the gateway, and when the cluster starts up for the first time,
@@ -313,7 +311,7 @@ http.cors.enabled: true
 # Set this option to a higher value on a slow or congested network
 # to minimize discovery failures:
 #
-discovery.zen.ping.timeout: 30s
+#discovery.zen.ping.timeout: 3s
 
 # For more information, see
 # <http://elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-zen.html>

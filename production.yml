@@ -3,6 +3,10 @@ db:
    file: docker-compose.yml
    service: db
   restart: on-failure:10
+  environment:
+    - ES_HEAP_SIZE=2g
+    - ES_MIN_MEM=2g
+    - ES_MAX_MEM=2g
   volumes:
    - "./config:/usr/share/elasticsearch/config"
    - "/data/elasticsearch_data/esData1:/data"
