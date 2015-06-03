@@ -14,7 +14,7 @@ There is a `docker-compose.yml` to be used in development and a `production.yml`
 To start in development:
 
 1.	`docker-compose up -d` start the service as daemon
-2.	`docker-compose up -d -f production.yml` to start with production yaml.
+2.	`docker-compose -f production.yml up -d ` to start with production yaml.
 
 How to run with docker
 ======================
